@@ -115,14 +115,14 @@ void SevenSegmentDisplay::setSegment(Seg seg, State state)
 
 
 
-int SevenSegmentDisplay::maxPredefinedValue()
+int SevenSegmentDisplay::maxPredefinedValue() const
 {
   return static_cast<int>(Predef::Val_Clear) - 1;
 }
 
 
 
-bool SevenSegmentDisplay::isValidPredefined(int value)
+bool SevenSegmentDisplay::isValidPredefined(int value) const
 {
   return value <= this->maxPredefinedValue() && value >= 0 ?
     true : false;

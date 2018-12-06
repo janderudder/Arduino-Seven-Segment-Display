@@ -80,13 +80,10 @@ public:
    *           Common anode or Common cathode.
    */
   explicit SevenSegmentDisplay(ComponentType);
-
   
   void initPin(Seg, pin_t);
-
   
   void clear();
-
   
   void display(Predef);
   void display(Point);
@@ -94,15 +91,11 @@ public:
 
   void usePredefinedValues();
   void useCustomValues(const uint8_t*);
-
   
   void setSegment(Seg, State);
 
-  
-  int maxPredefinedValue();
-
-  
-  bool isValidPredefined(int);
+  int maxPredefinedValue() const;
+  bool isValidPredefined(int) const;
 
 
 private: /* Private methods */
